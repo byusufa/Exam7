@@ -12,4 +12,5 @@ public class BaseRepo<T> {
         this.getClass().getGenericSuperclass();
         this.persistentClass = clazz;
     }
+
 }
