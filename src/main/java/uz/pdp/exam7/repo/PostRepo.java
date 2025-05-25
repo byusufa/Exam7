@@ -13,7 +13,6 @@ public class PostRepo extends BaseRepo<Post> {
 
         try (
                 EntityManager entityManager = EMF.createEntityManager();
-
         ) {
             return entityManager.createQuery("SELECT p FROM Post p ORDER BY p.createdAt DESC", Post.class)
                     .getResultList(); 
