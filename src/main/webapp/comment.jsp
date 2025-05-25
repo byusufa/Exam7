@@ -4,13 +4,15 @@
 <%@ page import="java.util.List" %>
 <%@ page import="lombok.Data" %>
 <%@ page import="java.time.format.DateTimeFormatter" %>
-<%@ page import="uz.pdp.exam7.repo.CommentRepo" %><%--
+
+<%@ page import="uz.pdp.exam7.repo.PostRepo" %><%--
   Created by IntelliJ IDEA.
   User: macbook_uz
   Date: 10/12/24
   Time: 17:01
   To change this template use File | Settings | File Templates.
 --%>
+
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
