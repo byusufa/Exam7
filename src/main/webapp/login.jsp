@@ -18,10 +18,10 @@
         <h3 class="text-center mb-4">Login</h3>
         <form action="/login" method="post">
             <div class="mb-3">
-                <input type="text" placeholder="Email" name="email" class="form-control" >
+                <input type="text" placeholder="Email" name="email" class="form-control">
             </div>
             <div class="mb-3">
-                <input type="password" placeholder="Password" name="password" class="form-control" >
+                <input type="password" placeholder="Password" name="password" class="form-control">
             </div>
             <button class="btn btn-danger w-100 mb-3">Enter</button>
             <div class="text-center">
