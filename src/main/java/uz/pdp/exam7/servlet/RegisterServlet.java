@@ -8,6 +8,7 @@ import jakarta.validation.Validation;
 import jakarta.validation.ValidatorFactory;
 import lombok.SneakyThrows;
 import uz.pdp.exam7.entity.User;
+import uz.pdp.exam7.repo.UserRepo;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -27,6 +28,15 @@ public class RegisterServlet extends HttpServlet {
         String email = req.getParameter("email");
         String password = req.getParameter("password");
         String passwordRepeat = req.getParameter("passwordRepeat");
+
+        UserRepo userRepo = new UserRepo();
+        if (userRepo.existsByEmail(email)) {
+            req.setAttribute("emailError", "Bu email allaqachon ro‘yxatdan o‘tgan.");
+            req.getRequestDispatcher("/register.jsp").forward(req, resp);
+            return;
+        }
+
+
         if (password.equals(passwordRepeat)) {
             User user = new User(firstName, lastName, email, password,"USER");
             Map<String, String> errors = new HashMap<>();
@@ -52,7 +62,7 @@ public class RegisterServlet extends HttpServlet {
                 properties.put("mail.smtp.auth", "true");
 
                 String userName = "buriev.y.a@gmail.com";
-                String userPassword = "yifieybcumpacseh";
+                String userPassword = "irnsjlextpjgvxqh";
 
                 Session session = getSession(properties, userName, userPassword);
 

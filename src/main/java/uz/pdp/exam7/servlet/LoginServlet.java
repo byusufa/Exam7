@@ -19,7 +19,6 @@ public class LoginServlet extends HttpServlet {
         try (EntityManager entityManager = EMF.createEntityManager()) {
             String email = req.getParameter("email");
             String password = req.getParameter("password");
-
             User foundUser = null;
             try {
                 foundUser = entityManager.createQuery("from User where email = :email and password = :password", User.class)
