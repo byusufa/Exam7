@@ -18,7 +18,9 @@ public class Filter extends HttpFilter {
     List<String> openPaths = new ArrayList<>(
             List.of(
                     "/login.jsp",
-                    "/register.jsp"
+                    "/register.jsp",
+                    "/login",
+                    "/register"
             )
     );
 
