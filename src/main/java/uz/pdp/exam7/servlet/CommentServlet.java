@@ -26,7 +26,6 @@ public class CommentServlet extends HttpServlet {
             HttpSession session = req.getSession();
             User currentUser = (User) session.getAttribute("currentUser");
             Post post = (Post) session.getAttribute("post");
-            System.out.println(post);
             String content = req.getParameter("content");
 
             if (currentUser == null || post == null) {

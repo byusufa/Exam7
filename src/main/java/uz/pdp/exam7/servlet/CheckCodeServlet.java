@@ -36,7 +36,5 @@ public class CheckCodeServlet extends HttpServlet {
         }else{
             resp.sendRedirect("/login.jsp");
         }
-
-
     }
 }
