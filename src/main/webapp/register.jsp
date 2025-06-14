@@ -45,10 +45,16 @@
                             <span><%=Objects.requireNonNullElse(map.get("lastName"), "")%></span>
                         </div>
 
+<%--                        <div class="mb-3">--%>
+<%--                            <input type="text" class="form-control" id="email" name="email" placeholder="Enter email">--%>
+<%--                            <span><%=Objects.requireNonNullElse(map.get("email"), "")%></span>--%>
+<%--                        </div>--%>
                         <div class="mb-3">
                             <input type="text" class="form-control" id="email" name="email" placeholder="Enter email">
-                            <span><%=Objects.requireNonNullElse(map.get("email"), "")%></span>
+                            <span style="color:red"><%=Objects.requireNonNullElse(map.get("email"), "")%></span>
+                            <span style="color:red"><%=Objects.requireNonNullElse(request.getAttribute("emailError"), "")%></span>
                         </div>
+
 
                         <div class="mb-3">
                             <input type="password" class="form-control" name="password"
